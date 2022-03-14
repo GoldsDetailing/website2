@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+
+#HeaderParent{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 160px;
+    background-image: linear-gradient(to right, rgb(0, 0, 0) , rgb(255, 205, 4)); 
+    
+}
+
+
+#boxSpacer{
+    position: relative;
+    flex:1;
+    display: block;
+    height: 160px;
+    width: 20px;
+    padding-left: 160px;
+    color: black;
+    z-index: 100;
+}
+
+#boxCol1{
+    flex:1;
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+
+#HeaderLogo img{
+   flex: 1;
+    height: 160px;
+    width: 160px;
+    position: relative;
+    z-index: 1000;
+
+}
+
+li{
+    list-style: none;
+}
+a{
+    color:black ;
+    text-decoration: none;
+}
+.navbar{
+    min-height: 70px;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav-menu{
+    display: block;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px ;
+    right:0;
+    top: 20%;
+    
+    
+    
+    
+    
+}
+.nav-branding{
+    font-size: 2rem;
+}
+.nav-item{
+    float: right;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.nav-link{
+    transition: 0.7 ease;
+
+}
+.nav-link:hover{
+    color: blue;
+}
+.hamburger{
+    display:none;
+    cursor: pointer;
+    top: 30%;
+    padding-right: 10px;
+    
+}
+.bar{
+    display: block;
+    width: 48px;
+    height: 7px;
+    margin: 8px 0px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+    border-radius: 5px;
+    
+
+}
+@media(max-width:768px){
+    .hamburger{
+        display:block;
+        position: absolute;
+        right:0;
+        z-index: 2001;
+        
+        
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        z-index: 2001;
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        z-index: 2001;
+    }
+    .nav-menu{
+        position:absolute;
+        left: -1000%;
+        top:70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100% ;
+        text-align: center;
+        transition: 0.3s;
+        
+        
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left:0;
+        z-index: 1000;
+    }
+}

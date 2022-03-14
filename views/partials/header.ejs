@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/css/headerStyle.css" />
+
+<div id="HeaderParent">
+    <a href="/"><div id="HeaderLogo">
+        <img src="/images/logo.png"></img>   
+        </a>
+    </div>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    
+                </li>
+                <li class="nav-item">
+                    <a href="/services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/gallery" class="nav-link">Gallery</a>
+                </li>
+            </ul>
+            <div class = "hamburger">
+                <span class ="bar"></span>
+                <span class ="bar"></span>
+                <span class ="bar"></span>
+            </div>
+        </nav>
+       
+    </div>
+
+      
+        
+
+    
+</div>
+<script>
+
+const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    
+    hamburger.addEventListener("click",()=>{
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    })
+    
+    document.querySelectorAll(".nav-link").forEach(n => n.
+        addEventListener("click", ()=>{
+            hamburger.classList.remove(".active");
+            navMenu.classList.remove(".active");
+    
+    }))</script>
+
+
