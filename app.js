@@ -21,4 +21,4 @@ app.use('/', require('./routes/index'));
 app.use('/services', require('./routes/services'));
 app.use('/gallery', require('./routes/gallery'));
 
-app.listen(PORT, console.log(`server started on ${PORT}`));
+app.listen(port, console.log(`server started on ${port}`));
