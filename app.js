@@ -10,7 +10,7 @@ app.use(express.static(__dirname + 'public/css'))
 app.use(express.static(__dirname + 'public/js'))
 */
 
-const PORT = 3000;
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
