@@ -3,19 +3,13 @@ const path = require('path');
 
 
 const app = express();
-app.use(express.static(path.join(__dirname, 'public')));
 
-/*app.use(express.static('public'));
-app.use(express.static(__dirname + 'public/css'))
-app.use(express.static(__dirname + 'public/js'))
-*/
+app.use(express.static(path.join(__dirname, 'public')));
 
 const port = process.env.PORT || 3000;
 
 app.set('view engine', 'ejs');
 
-
-app.use('/images', express.static(__dirname + '/Images'));
 
 app.use('/', require('./routes/index'));
 app.use('/services', require('./routes/services'));
